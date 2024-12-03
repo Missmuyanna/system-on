@@ -1,0 +1,55 @@
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustes de la cabecera */
+    .header {
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    /* Ajustes del contenedor principal */
+    .text-background-contacto {
+      width: 90%; /* Reduce el ancho para dispositivos móviles */
+      left: 50%;
+      padding: 20px;
+      border-radius: 15px;
+      transform: translateX(-50%);
+    }
+  
+    /* Ajustes en el formulario */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%; /* Ocupa el ancho completo */
+    }
+  
+    /* Ajuste de tamaño del texto */
+    .contact-form label {
+      font-size: 1em;
+    }
+  
+    /* Ajuste del botón */
+    .contact-form button {
+      width: 100%; /* Botón ocupa todo el ancho */
+      font-size: 1em;
+      padding: 12px;
+    }
+  
+    /* Ajuste del video de fondo para que no sea tan prominente en móviles */
+    .background-video-contacto {
+      object-fit: contain; /* Ajusta el video para que no recorte contenido */
+    }
+  
+    /* Tamaño del contenedor de la imagen personal */
+    .mi-foto-container {
+      width: 150px;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  

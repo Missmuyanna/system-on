@@ -1,38 +1,275 @@
+/*mi foto personal*/
+.mi-foto {
+  width: 200px; /* Ajusta el ancho */
+  height: auto; /* Para mantener la proporción */
+  border-radius: 50%; /* Si quieres una imagen circular */
+  display: block; /* Para controlar el flujo */
+  margin: 0 auto; /* Para centrar horizontalmente */
+}
+
+.mi-foto-container {
+  position: absolute; /* Para poder posicionar la imagen libremente */
+  top: 15%; /* Ajusta la distancia desde la parte superior */
+  left: 30px; /* Mueve la imagen hacia la izquierda */
+}
+
+.mi-foto {
+  width: 370px; /* Cambia el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción correcta */
+  border-radius: 40%; /* Si quieres hacer la imagen circular */
+}
+
+/* lo de la pantalla de carga */
+.lds-hourglass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid transparent;
+  border-top-color: #007bff; /* Color azul principal */
+  border-bottom-color: #00c3ff; /* Segundo color azul */
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+/* esto es todo sobre lo de sobre mi y eso de la pagina
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;  /* Suaviza el desplazamiento entre secciones */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: rgba(5, 27, 126, 0.74);
+  box-shadow: 0 2px 5px rgb(141, 219, 240);
+  z-index: 10; /* Elevar el nivel del menú sobre otros elementos */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.logo h1 {
+  font-size: 24px;
+  color: #0073e6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+/*las letricas de arriba*/
+.nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 251, 251);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+/* Color al hacer click en la parte de arriba*/
+.nav ul li a:hover {
+  color: #0073e6;
+}
+
+/* Estilos para las secciones */
+.section {
+  height: 100vh; /* Cada sección ocupa la pantalla completa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+/* Ajustar el tamaño del logo */
+.logo-img {
+  width: 80px;  /* Cambia el tamaño según lo que necesites, por ejemplo, más pequeño */
+  height: auto;  /* Mantiene la proporción de la imagen */
+  margin-left: 0px; /* Espacio hacia la izquierda */
+}
+/* edicion del video  */
+/* Video en el fondo de la sección */
+/* Ajustes generales para la estructura de la página */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CADA SECCION UNA POR UNA */
+.inicio {
+}
+/* Estilo para el nombre fabianna julio*/
+.nombre-header {
+  position: absolute;
+  top: 150px; /* Ajusta la posición a tu gusto */
+  left: 500px;
+  color: #3498db; /* Cambia el color a tu preferencia */
+  font-size: 2rem; /* Tamaño del texto del nombre */
+}
+
+/* Estilo para el texto de sobre mi  */
+.bienvenida-header {
+  position: absolute;
+  top: 300px; /* Ajusta la posición a tu gusto */
+  left: 500px;
+  color: #e74c3c; /* Color diferente para el texto de bienvenida */
+  font-size: 1.5rem; /* Tamaño del texto de bienvenida */
+}
+
+/* Video de fondo  de la zona de Inicio*/
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Envía el video al fondo para que no tape los textos */
+}
+
+
+.sobre-mi {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+/* background de la section sobre mi*/
+
+.background-video-sobremi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.text-background-sobremi {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.441); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.portfolio { 
+}
+/* Video de fondo para la sección Portfolio */
+.background-video-portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Hace que el video esté detrás del contenido */
+}
+
+.text-background-portfolio {
+  position: relative;
+  z-index: 1;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+  padding: 20px;
+}
+
+
+/* Estilos generales de la sección de contacto */
+.contacto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Video de fondo */
+.background-video-contacto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contenedor del formulario FUNCIONA PERFECTAMENTE*/
+.text-background-contacto {
+  position: relative;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.692); /* Fondo semitransparente */
+  padding: 50px;
+  border-radius: 60px;
+  max-width: 300px;
+  width: 130%;
+  margin: auto;
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Posicionamiento libre del formulario  está PERFECTAMENTE*/   
+.text-background-contacto {
+  position: absolute;
+  top: 40%;
+  left: 75%; /* Ajusta el valor para cambiar su posición horizontal */
+  transform: translateY(-50%); /* Centrar verticalmente */
+}
+
+/* Ajustes de tamaño y estilo del formulario */
+
+
+/* Sección general para asegurarse de que el video no se extienda más allá de su sección */
+.section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden; /* Evita que el contenido se salga de la sección */
 }

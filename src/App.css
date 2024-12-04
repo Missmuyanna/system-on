@@ -313,7 +313,11 @@ body, html {
   left: 75%; /* Ajusta el valor para cambiar su posición horizontal */
   transform: translateY(-50%); /* Centrar verticalmente */
 }
-
+.texto {
+  top: 70%;
+  left: 75%; /* Ajusta el valor para cambiar su posición horizontal */
+  color: rgb(0, 0, 0);
+}
 /* Ajustes de tamaño y estilo del formulario */
 
 

@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);  // Cambiamos el estado a false después de 3 segundos
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(timer); // Limpiar el temporizador
   }, []);
   // Aquí retornamos  HTML que se va a renderizar en la página.
@@ -144,13 +144,18 @@ function App() {
           muted
           className="background-video-contacto"
         >
-          <source src={backgroundVideoContacto} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/videos/contacto.mp4`} type="video/mp4" />
         </video>
         <div className="text-background-contacto">
             {/* TEXTO DE CONTACTO */}
           <h2>Dejame tus datos xd</h2>
           <p>Me pondré en contacto contigo lo antes posible</p>
           <ContactoForm />
+        </div>
+        <div className="texto">
+            {/* TEXTO DE CONTACTO */}
+          <h2>Tambien puedes contactarme </h2>
+          <p>INFORMACION DE CONTACTO</p>
         </div>
       </section>
     </div>          

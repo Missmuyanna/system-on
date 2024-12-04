@@ -1,55 +1,78 @@
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Ajustes de la cabecera */
+    /* Ajustes generales para la sección */
+    .sobre-mi {
+      height: auto; /* Ajusta la altura automáticamente al contenido */
+      padding: 20px; /* Espaciado interno */
+      text-align: center; /* Centra el contenido */
+    }
+  
+    /* Ajuste del video de fondo */
+    .background-video-sobremi {
+      object-fit: cover; /* Mantiene el enfoque en el video */
+      height: 50vh; /* Reduce la altura del video para dispositivos pequeños */
+    }
+  
+    /* Ajustes para el texto */
+    .text-background-sobremi {
+      width: 90%; /* Reduce el ancho del contenedor */
+      padding: 15px; /* Ajusta el espaciado interno */
+      font-size: 1rem; /* Escala el texto */
+      margin: 10px auto; /* Centra el contenido verticalmente */
+    }
+  
+    /* Ajustes para la cabecera */
     .header {
-      flex-direction: column;
-      padding: 10px;
-      text-align: center;
+      padding: 10px 5px; /* Reduce el padding en móviles */
+      font-size: 1.2rem; /* Ajusta el tamaño del texto */
     }
   
+    /* Ajustes para botones */
+    .button {
+      font-size: 0.9rem; /* Reduce el tamaño del botón */
+      padding: 10px; /* Ajusta el espaciado interno */
+      width: 100%; /* Ocupa todo el ancho */
+      margin: 10px 0; /* Espacio entre botones */
+    }
+  
+    /* Ajustes de tipografía */
+    h1, h2, h3, p {
+      font-size: 1rem; /* Ajusta el tamaño general del texto */
+      line-height: 1.5; /* Mejora la legibilidad */
+    }
+  
+    /* Ajuste para imágenes */
+    img {
+      max-width: 100%; /* Escala las imágenes para que no desborden */
+      height: auto; /* Mantiene la proporción */
+    }
+  
+    /* Ajuste de navegación */
     .nav ul {
-      flex-direction: column;
-      gap: 10px;
+      padding: 0; /* Elimina padding externo */
+      margin: 0 auto; /* Centra la navegación */
+      display: flex;
+      flex-direction: column; /* Apila los elementos */
+      gap: 10px; /* Espacio entre enlaces */
     }
   
-    /* Ajustes del contenedor principal */
-    .text-background-contacto {
-      width: 90%; /* Reduce el ancho para dispositivos móviles */
-      left: 50%;
-      padding: 20px;
-      border-radius: 15px;
-      transform: translateX(-50%);
+    .nav a {
+      font-size: 1rem; /* Ajusta el tamaño de los enlaces */
+      padding: 10px; /* Espaciado interno para clics más fáciles */
     }
   
-    /* Ajustes en el formulario */
+    /* Ajuste de formulario */
     .contact-form input,
     .contact-form textarea {
-      width: 100%; /* Ocupa el ancho completo */
+      font-size: 1rem; /* Escala el texto en los campos */
+      padding: 10px; /* Mejora el espaciado interno */
     }
   
-    /* Ajuste de tamaño del texto */
-    .contact-form label {
-      font-size: 1em;
-    }
-  
-    /* Ajuste del botón */
-    .contact-form button {
-      width: 100%; /* Botón ocupa todo el ancho */
-      font-size: 1em;
-      padding: 12px;
-    }
-  
-    /* Ajuste del video de fondo para que no sea tan prominente en móviles */
-    .background-video-contacto {
-      object-fit: contain; /* Ajusta el video para que no recorte contenido */
-    }
-  
-    /* Tamaño del contenedor de la imagen personal */
-    .mi-foto-container {
-      width: 150px;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
+    /* Ajuste para evitar márgenes laterales no deseados */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Previene el scroll horizontal */
     }
   }
   

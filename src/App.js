@@ -83,27 +83,39 @@ function App() {
       <section id="inicio" className="section inicio">
         {/* Video de fondo */}
         <video autoPlay loop muted playsInline className="video-background">
-          <source src={`${process.env.PUBLIC_URL}/videos/teddy.mp4`} type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/videos/videoinicio.mp4`} type="video/mp4" />
         </video>
         {/* TEXTO DE INICIO */}
-        <h2 className="nombre-header">nombre del header</h2>
-        <h2 className="bienvenida-header">informacion del header</h2>
+        <h2 className="nombre-header"></h2>
+        <h2 className="bienvenida-header"></h2>
       </section>
 
       {/* Sección Sobre Mí */}
       <section id="sobre-mi" className="section sobre-mi">
-        <video
-          autoPlay
-          loop
-          muted
-          className="background-video-sobremi"
-        >
-          <source src={backgroundVideoSobreMi} type="video/mp4" />
-        </video>
-        <div className="text-background">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="background-video-sobremi"
+      >
+        <source src={`${process.env.PUBLIC_URL}/videos/satelite.mp4`} type="video/mp4" />
+  
+      </video>
+
+
+        <div className="text-background-sobremi vision-text">
          {/* TEXTO DE SOBRE MI*/} 
-          <h2>Sobre Mí</h2>
-          <p>Información sobre mí...</p>
+          <h2>Visión</h2>
+          <p>Ser líder en la región en la provisión de soluciones integrales de tecnología y comunicaciones, ofreciendo servicios y productos de alta calidad, innovación y confiabilidad.</p>
+        </div>
+        <div className="text-background-sobremi mision-text">
+          <h2>Misión</h2>
+          <p>Proporcionar soluciones tecnológicas eficientes y personalizadas a hogares, empresas y organizaciones, satisfaciendo sus necesidades de conectividad, seguridad y productividad.</p>
+        </div>
+        <div className="lema-text">
+                  <h2>Nuestro lema es </h2>
+          <p>"Tecnologia al alcance de tus manos"</p>
         </div>
       </section>
 

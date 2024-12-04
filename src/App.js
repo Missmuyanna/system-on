@@ -148,7 +148,7 @@ function App() {
         </video>
         <div className="text-background-contacto">
             {/* TEXTO DE CONTACTO */}
-          <h2>Dejame tus datos</h2>
+          <h2>Dejame tus datos xd</h2>
           <p>Me pondré en contacto contigo lo antes posible</p>
           <ContactoForm />
         </div>

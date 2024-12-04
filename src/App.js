@@ -12,7 +12,7 @@ import './celu.css';
 
 
 // La ruta de mi foto  que está en la carpeta public
-const MiFoto = `${process.env.PUBLIC_URL}/images/mifoto.jpg`;
+const MiFoto = `${process.env.PUBLIC_URL}/images/`;
 //fondo seccion sobre mi
 const backgroundVideoSobreMi = `${process.env.PUBLIC_URL}/videos/fondito.mp4`;
 //fondo seccion portfolio
@@ -21,10 +21,12 @@ const backgroundVideoPortfolio = `${process.env.PUBLIC_URL}/videos/portfolio.mp4
 const backgroundVideoContacto = `${process.env.PUBLIC_URL}/videos/contacto.mp4`;
 
 
-//funcion de carga del sppiner
+// Función para mostrar un vídeo de carga
 function LoadingSpinner() {
   return (
-    <div className="lds-hourglass"></div>
+    <video autoPlay loop muted className="loadingVideo">
+      <source src={`${process.env.PUBLIC_URL}/videos/logo.mp4`} type="video/mp4"/>
+    </video>
   );
 }
 
@@ -55,23 +57,25 @@ function App() {
           height: '100vh',   
           margin: 0
         }}>
+
+
         {/* MI FOTO PERSONAL */}             
           <div className="mi-foto-container">
-            <img src={MiFoto} alt="Mi foto" className="mi-foto" />
+            
           </div>
 
            <div className="App">
             <header className="header">
               <div className="logo">
-              <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className="logo-img" />
+              <img src={`${process.env.PUBLIC_URL}/images/sologo.png`} alt="Logo" className="logo-img" />
           </div>
           {/* Parte horizontal de navegación */}
         <nav className="nav">
           <ul>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobre-mi">SOBRE MÍ</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="#sobre-mi">SOBRE NOSOTROS</a></li>
+            <li><a href="#portfolio">SERVICIOS OFRECIDOS</a></li>
+            <li><a href="#contacto">CONTACTANOS</a></li>
           </ul>
         </nav>
       </header>
@@ -82,8 +86,8 @@ function App() {
           <source src={`${process.env.PUBLIC_URL}/videos/teddy.mp4`} type="video/mp4" />
         </video>
         {/* TEXTO DE INICIO */}
-        <h2 className="nombre-header">Fabianna Julio</h2>
-        <h2 className="bienvenida-header">Bienvenidos a mi página</h2>
+        <h2 className="nombre-header">nombre del header</h2>
+        <h2 className="bienvenida-header">informacion del header</h2>
       </section>
 
       {/* Sección Sobre Mí */}
@@ -115,8 +119,8 @@ function App() {
         </video>
         <div className="text-background-portfolio">
           {/* TEXTO DE PORTFOLIO*/}
-        <h2>Mi Portfolio</h2>
-        <p>Proyectos realizados...</p>
+        <h2>Servicios ofrecidos </h2>
+        <p>servicios...</p>
         </div>
       </section>
 

@@ -18,28 +18,23 @@
   height: auto; /* Mantiene la proporción correcta */
   border-radius: 40%; /* Si quieres hacer la imagen circular */
 }
-
-/* lo de la pantalla de carga */
-.lds-hourglass {
-  position: absolute;
+/* probando la pntalla de carga
+/* Estilos para el vídeo de carga */
+.loadingVideo {
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1050;
+  width: 20%; /* Ajuste de ancho como porcentaje */
+  height: auto; /* Ajuste automático de la altura para mantener proporción */
+  max-width: 300px; /* Máximo ancho permitido */
+  max-height: 300px; /* Máximo altura permitida */
+  min-width: 50px; /* Mínimo ancho permitido */
+  min-height: 50px; /* Mínimo altura permitida */
 }
 
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 8px;
-  box-sizing: border-box;
-  border: 32px solid transparent;
-  border-top-color: #007bff; /* Color azul principal */
-  border-bottom-color: #00c3ff; /* Segundo color azul */
-  animation: lds-hourglass 1.2s infinite;
-}
+
 
 @keyframes lds-hourglass {
   0% {
@@ -64,6 +59,7 @@
 }
 
 html, body {
+  
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;  /* Suaviza el desplazamiento entre secciones */
 }
@@ -79,8 +75,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  background-color: rgba(5, 27, 126, 0.74);
-  box-shadow: 0 2px 5px rgb(141, 219, 240);
+  background-color: rgba(29, 29, 30, 0.954);
+  box-shadow: 0 2px 5px rgb(110, 207, 233);
   z-index: 10; /* Elevar el nivel del menú sobre otros elementos */
 }
 
@@ -120,7 +116,7 @@ html, body {
 }
 /* Ajustar el tamaño del logo */
 .logo-img {
-  width: 80px;  /* Cambia el tamaño según lo que necesites, por ejemplo, más pequeño */
+  width: 300px;  /* Cambia el tamaño según lo que necesites, por ejemplo, más pequeño */
   height: auto;  /* Mantiene la proporción de la imagen */
   margin-left: 0px; /* Espacio hacia la izquierda */
 }
